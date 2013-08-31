@@ -1,3 +1,6 @@
+PART I Build a Receiver
+     we use openresty+lua+redis build our receiver,the receiver just push the message into redis,
+     we will build a deliver program read message from redis and deliver it.
 step 1: install tengine+redies2-module
 
 wget http://openresty.org/download/ngx_openresty-1.2.8.6.tar.gz
@@ -17,3 +20,4 @@ cd utils
 sh install_server.sh
 
 step 3:configure nginx
+see detail in nginx.conf
