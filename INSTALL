@@ -1,0 +1,19 @@
+step 1: install tengine+redies2-module
+
+wget http://openresty.org/download/ngx_openresty-1.2.8.6.tar.gz
+cd ngx_openresty-1.2.8.6
+yum -y install gcc readline-devel ncurses-devel pcre-devel openssl-devel
+./configure --prefix=/usr/local/nginx/
+make
+make install
+
+step 2: install redis
+wget http://download.redis.io/releases/redis-2.6.16.tar.gz
+tar -xvzf redis-2.6.16.tar.gz 
+cd redis-2.6.16
+make
+make install
+cd utils
+sh install_server.sh
+
+step 3:configure nginx
